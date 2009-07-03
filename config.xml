@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-15" ?>
+
+<data>
+<general>
+<!-- En la seccion GENERAL se detallan la configuracion general del documento 
+Las opciones son:
+Proyecto: Nombre del proyecto para el que se realoizaron las pruebas
+Descripcion: Donde especificamos las pruebas realizadas
+Controles de Transaccion: describe cada uno de los controles de transaccion utilizados en el escenario. Por ejemplo: 'login', 'guardar', 'salir' , etc...
+		IMPORTANTE: Deben estar escritos de la misma manera (respetando mayusculas y minusculas, como signos de puntuacion, etc...)
+-->
+	<proyecto>PETROBRAS</proyecto>
+	<descripcion>Pruebas realizadas sobre la aplicación PETROBRAS el dia 02-01-09</descripcion>
+</general>
+<alertas>
+<!-- En la seccion ALERTAS se detallan  aspectos relacionados  a la media de las paginas
+Las opciones son:
+porcentaje aceptable de tiempo de respuesta (elapcedporc): porcentaje dentro del cual se considera aceptable el tiempo de respuesta de la aplicacion. Debe respetar la forma "nn.nn"
+ej: 0.2
+porcentaje aceptable de tiempo en latency (latencyporc):  porcentaje dentro del cual se considera aceptable el tiempo de latency de la aplicacion. Debe respetar la forma "nn.nn"
+ej: 0.2
+-->
+	<elapsedporc>0.2</elapsedporc>
+	<latencyporc>0.2</latencyporc>
+</alertas>
+<responsetime>
+<!-- En la seccion ResponseTime se detallan  aspectos relacionados  los tiempos de respuesta de las paginas
+Las opciones son:
+respTime_satisfactorio: Tiempo de respuesta en milisegundos para el cual se considera SATISFACTORIO la respuesta de las paginas de la aplicacion
+ej: 1000 
+respTime_tolerante:  Tiempo de respuesta en milisegundos para el cual se considera TOLERANTE la respuesta de las paginas de la aplicacion
+ej: 1100
+respTime_percentile: determina el porcentaje de percentile buscado (80%, 90%, 95%)
+-->
+	<satisfactorio>30000</satisfactorio>
+	<tolerante>50000</tolerante>
+	<percentile>90</percentile>
+	<scale>m</scale>
+</responsetime>
+<latencytime>
+<!-- En la seccion ResponseTime se detallan  aspectos relacionados  los tiempos de respuesta de las paginas
+Las opciones son:
+respTime_satisfactorio: Tiempo de respuesta en milisegundos para el cual se considera SATISFACTORIO la respuesta de las paginas de la aplicacion
+ej: 1000 
+respTime_tolerante:  Tiempo de respuesta en milisegundos para el cual se considera TOLERANTE la respuesta de las paginas de la aplicacion
+ej: 1100
+respTime_percentile: determina el porcentaje de percentile buscado (80%, 90%, 95%)
+-->
+	<satisfactorio>30000</satisfactorio>
+	<tolerante>50000</tolerante>
+	<percentile>90</percentile>
+	<scale>s</scale>
+</latencytime>
+<throughput>
+<!-- En la seccion Throughput se detallan  aspectos relacionados  al rendimiento de las paginas.
+Las opciones son:
+Throughput_satisfactorio: Tiempo de respuesta en milisegundos para el cual se considera SATISFACTORIO la respuesta de las paginas de la aplicacion
+ej: 1000 
+Throughput_tolerante:  Tiempo de respuesta en milisegundos para el cual se considera TOLERANTE la respuesta de las paginas de la aplicacion
+ej: 1100
+-->
+	<satisfactorio>10000</satisfactorio>
+	<tolerante>11000</tolerante>
+	<percentile>90</percentile>
+</throughput>
+<!--<apdex>-->
+<!-- En la seccion ResponseTime se detallan  aspectos relacionados  los tiempos de respuesta de las paginas
+Las opciones son:
+satisfactorio: Tiempo de respuesta en milisegundos para el cual se considera SATISFACTORIO la respuesta de las paginas de la aplicacion
+ej: 1000 
+tolerante:  Tiempo de respuesta en milisegundos para el cual se considera TOLERANTE la respuesta de las paginas de la aplicacion
+ej: 1100
+
+	<satisfactorio>10000</satisfactorio>
+	<tolerante>11000</tolerante>-->
+<!--</apdex>-->
+</data>
