@@ -37,7 +37,7 @@ from optparse import OptionParser
 parser = OptionParser()
 parser.add_option("-i", "--input" , dest="input",
                   help="La ruta al output generado por jmeter", 
-                  metavar="INPUTFILE", default="PRAGMA\\Results.jtl")
+                  metavar="INPUTFILE", default="Results.jtl")
 parser.add_option("-o", "--output", dest="output", 
                   default="JMeterReport.html",
                   help="El nombre del archivo generado")
@@ -92,8 +92,9 @@ class Report:
         
         # First, we load the user's configuration if the xml file is found.
         self.config = {}
+        
         try:
-            xml = ET.parse("config.xml").getroot()    
+            xml = ET.parse("config.xml").getroot() 
         except IOError:
             
             # If the file is not found, we use the defaults and ask for the
@@ -166,6 +167,7 @@ class Report:
         # We read the input csv and pass it to an array
         self.requestsArray = []
         self.controlsArray = []
+        
         for row in csv.DictReader(open(csvinput,"rb")):
             # Some int transformations for numeric fields
             if row['label'] <> "Debug Sampler":
