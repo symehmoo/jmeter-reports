@@ -1,0 +1,1 @@
+This project aims to improve JMeter's reports presentation of a performance tests execution for a better and easier analysis of the results.
